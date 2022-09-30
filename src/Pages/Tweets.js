@@ -7,7 +7,7 @@ import dummyTweets from '../static/dummyData';
 
 const Tweets = () => {
 
-  const [userNameInput, setUser] = useState("");
+  const [userNameInput, setUser] = useState("parkhacker");
   const [messageInput, setMsg] = useState("");
   const [dataInput, setData] = useState(dummyTweets);
   // TODO : 새로 트윗을 작성하고 전송할 수 있게 useState를 적절히 활용하세요. O
@@ -67,7 +67,8 @@ const Tweets = () => {
             </div>
             <div className="tweetForm__submit">
               <div className="tweetForm__submitIcon"></div>
-              <button className = "tweetForm__submitButton" onClick = {handleButtonClick}>Submit</button>
+              <button className = "tweetForm__submitButton" onClick = {handleButtonClick} 
+              >Submit</button>
               {/* TODO : 작성한 트윗을 전송할 수 있는 button 엘리먼트를 작성하세요. */}
             </div>
           </div>
