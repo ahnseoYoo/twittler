@@ -14,22 +14,26 @@ import './global-style.css';
 const App = (props) => {
   return (
     <BrowserRouter>
-    <div className="App">
-      <main>
-        <Sidebar />
-        <section className="features">
-            <Routes>
-              <Route path = "/" element = {<Tweets />}/>
-              <Route path = "/mypage" element = {<MyPage />} />
-              <Route path = "/about" element = {<About />}/>
-            </Routes>
+    <div>
+      <div className='Title'>SOME <br/>TWEETS</div>
+      <div className="App">
+        <main>
+          <Sidebar />
+          <section className="features">
+              <Routes>
+                <Route path = "/" element = {<Tweets />}/>
+                <Route path = "/mypage" element = {<MyPage />} />
+                <Route path = "/about" element = {<About />}/>
+              </Routes>
 
-          {/* TODO : 유어클래스를 참고해서, 테스트 케이스를 통과하세요.
-            TODO : React Router DOM 설치 후 BrowserRouter, Routes, Route의 주석을 해제하고 Routes, Route 컴포넌트를 적절하게 작성합니다. O */}
-          {/* Route 예시: <Route path="/" element={<Tweets />}></Route> O */}
-        </section>
-      </main>
+            {/* TODO : 유어클래스를 참고해서, 테스트 케이스를 통과하세요.
+              TODO : React Router DOM 설치 후 BrowserRouter, Routes, Route의 주석을 해제하고 Routes, Route 컴포넌트를 적절하게 작성합니다. O */}
+            {/* Route 예시: <Route path="/" element={<Tweets />}></Route> O */}
+          </section>
+        </main>
+      </div>
     </div>
+   
     </BrowserRouter>
   );
 };

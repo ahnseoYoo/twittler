@@ -5,21 +5,22 @@
 }
 
 .myInfo__container {
-  border-bottom: 1px solid var(--main-border-color);
+  /* border-bottom: 1px solid var(--main-border-color); */
   margin-bottom: 0.5rem;
 }
 
 .myInfo__wrapper {
-  padding-left: 15px;
-  height: 97px;
+  padding: px;
+  height: 180px;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   color:white;
   background-color: var(--mypage-component-color);
 }
 
 .myInfo__detail {
-  padding-left: 20px;
+  /* padding-left: 20px; */
   display: flex;
   flex-direction: column;
 }
@@ -40,4 +41,50 @@
   flex: 1 0 80vh;
   border: 2px solid var(--mypage-component-color);
   overflow-y: scroll;
+}
+
+.myInfo__changePic{
+  border: 1px solid white;
+  background-color: black;
+  padding: 5px;
+}
+
+.myInfo__changePic:hover{
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.popup {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.popup_inner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  position: absolute;
+  width: 500px;
+  height: 50px;
+  /* left: 35%;
+  right: 35%;
+  top: 30%;
+  bottom: 30%; */
+  margin: auto;
+  background: rgba(0, 0, 0, 0.539);
 }

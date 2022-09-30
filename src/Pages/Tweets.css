@@ -1,12 +1,13 @@
 .tweetForm__container {
-  border-bottom: 1px solid var(--main-border-color);
+  /* border-bottom: 1px solid var(--main-border-color); */
   margin-bottom: 0.5rem;
 }
 
 .tweetForm__wrapper {
+  height: 180px;
   display: flex;
   flex-direction: row;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
   background-color: var(--tweets-component-color);
 }
 
@@ -24,33 +25,43 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  flex-direction: column;
+  flex-direction: row;
   flex: 1 0 0;
 }
 
 .tweetForm__inputWrapper {
   display: flex;
   margin: 0.5rem;
-  flex: 0 0 4rem;
+  width: 320px;
+  /* flex: 0 0 4rem; */
 }
 
 .tweetForm__input {
   display: flex;
+  width: 320px;
   flex-direction: column;
-  flex: 1 0 0;
+  /* flex: 1 0 0; */
 }
 
 .tweetForm__input--username {
+  background-color: rgba(233, 212, 220, 0.672);
   flex: 1 0 0;
   width: 20rem;
   border: 0;
+  border-radius: 3px;
   margin-bottom: 2px;
+  padding: 3px;
+  color:rgb(46, 20, 4);
 }
 
 .tweetForm__input--message {
+  background-color: rgba(233, 212, 220, 0.672);
   flex: 3 0 0;
   width: 20rem;
   border: 0;
+  border-radius: 3px;
+  padding: 3px;
+  color:rgb(46, 20, 4);
 }
 
 .tweetForm__count {
@@ -65,10 +76,13 @@
 }
 
 .tweetForm__submit {
+  width: 100px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex: 1 0 0;
+  margin: 25px;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+  /* flex: 1 0 0; */
 }
 
 .tweetForm__submitIcons {
@@ -76,15 +90,26 @@
 }
 
 .tweetForm__submitButton {
+  width: 100px;
+  height: 70px;
   margin: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   cursor: pointer;
+  background: rgb(68, 14, 41);
+  outline: 3px solid rgb(134, 49, 82);
+  color: rgb(226, 162, 185);
+
+  transition: 0.4s;
 }
 
 .tweetForm__submitButton:hover,
 .tweetForm__submitButton:focus {
-  background: var(--button-hover-color);
+  /* font-size: larger; */
+  background-color: black;
+  color: rgb(255, 255, 255);
+  outline: 3px solid rgb(183, 179, 179);
+
 }
 
 .tweetForm__submitButton:focus {
@@ -93,9 +118,10 @@
 }
 
 .tweets {
-  flex: 1 0 70vh;
+  /* flex: 1 0 70vh; */
   border: 2px solid var(--tweets-component-color);
   overflow-y: scroll;
+  scrollbar-color: dark;
 }
 
 .tweet__selectUser {

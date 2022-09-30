@@ -1,9 +1,11 @@
 import React from 'react';
+import dummyTweets from './static/dummyData';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className = "footer">
       <div>
+      {`Total tweet count: ${dummyTweets.length}`}
       </div>
     </footer>
   );

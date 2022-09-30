@@ -17,14 +17,25 @@
   --button-color: var(--coz-blue-600); /*#295ce0*/
   --button-hover-color: var(--coz-blue-500); /*#5e85e8*/
   --shade-color: var(--gray-200); /*#e6e6e6*/
-  --mypage-component-color: #eb9705;
-  --about-component-color: #097e4d;
-  --tweets-component-color: #003380;
+  --mypage-component-color: #410c1f86;
+  --about-component-color: #410c1f86;
+  --tweets-component-color: #410c1f86;
+}
+
+#root {
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
 }
 
 body {
+  background-image: url("tweets_backbround.jpg");
+
+  background-size: cover;
+
   display: flex;
   justify-content: center;
+  align-content: center;
   min-height: 100vh;
 }
 
@@ -63,12 +74,17 @@ textarea {
 }
 
 .App {
+  height: 1000px;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  /* min-height: 100%; */
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 100px;
 }
 
 footer {
+  background-color: rgba(0, 0, 0, 0.444);
   position: relative;
   flex: 0 0 1rem;
   padding: 0.3rem;
@@ -82,13 +98,18 @@ footer {
 main {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   max-width: 640px;
   flex: 1 0 0;
 }
 
 .sidebar {
+  height: 1000px;
+  background-color: rgba(0, 0, 0, 0.533);
   display: flex;
   flex-direction: column;
+
 }
 
 .far,
@@ -99,11 +120,21 @@ main {
   cursor: pointer;
 }
 
+.fa-comment-dots, 
+.fa-question-circle, 
+.fa-user  {
+  color: #df89a1;
+}
+
 .features {
+  background-color: rgba(0, 0, 0, 0.533);
+  height: 1000px;
   width: 564px;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--main-border-color);
+  /* border: 1px solid var(--main-border-color); */
+  /* border-radius: 25px; */
+  overflow: hidden;
   flex: 1 0 0;
 }
 
@@ -113,3 +144,12 @@ main {
   top: 4px;
   height: 22px;
 }
+
+.Title {
+  color: rgb(188, 100, 151);
+  font-size: 120px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+

@@ -54,7 +54,7 @@ const Tweets = () => {
       <div className="tweetForm__container">
         <div className="tweetForm__wrapper">
           <div className="tweetForm__profile">
-            <img src = {userNameInput === "parkhacker" ? `https://randomuser.me/api/portraits/lego/5.jpg`: `https://randomuser.me/api/portraits/lego/${getRandomNumber(
+            <img src = {userNameInput === "parkhacker" ? dummyTweets[1].picture : `https://randomuser.me/api/portraits/lego/${getRandomNumber(
               1,
               9
             )}.jpg`} />
@@ -73,18 +73,16 @@ const Tweets = () => {
                 className="tweetForm__input--message" />
 
               </div>
-              <div className="tweetForm__count" role="status">
+              {/* <div className="tweetForm__count" role="status">
                 <span className="tweetForm__count__text">
-                  {`total: ${dataInput.length}`}
-                  {/* TODO : 트윗 총 개수를 보여줄 수 있는 Counter를 작성하세요. O */}
+                  {`Total: ${dataInput.length}`}
                 </span>
-              </div>
+              </div> */}
             </div>
             <div className="tweetForm__submit">
               <div className="tweetForm__submitIcon"></div>
               <button className = "tweetForm__submitButton" onClick = {handleButtonClick} 
               >Submit</button>
-              {/* TODO : 작성한 트윗을 전송할 수 있는 button 엘리먼트를 작성하세요. */}
             </div>
           </div>
         </div>
