@@ -137,6 +137,15 @@ main {
 .fa-question-circle, 
 .fa-user  {
   color: #3ffa3f;
+  text-shadow:
+    0 0 7px rgb(39, 156, 37),
+    0 0 10px rgb(19, 81, 18),
+    0 0 21px rgb(32, 103, 31),
+    0 0 42px rgb(6, 93, 31),
+    0 0 82px rgb(6, 93, 31),
+    0 0 92px rgb(6, 93, 31),
+    0 0 102px rgb(6, 93, 31),
+    0 0 151px rgb(6, 93, 31);
 }
 
 .features {
