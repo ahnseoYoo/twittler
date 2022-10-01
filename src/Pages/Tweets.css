@@ -23,6 +23,10 @@
   height: 50px;
   border-radius: 50px;
   object-fit: cover;
+  box-shadow:
+  0 0 7px rgb(39, 156, 37),
+  0 0 10px rgb(19, 81, 18),
+  0 0 21px rgb(32, 103, 31);
 }
 
 .tweetForm__inputContainer {
@@ -66,6 +70,15 @@
   border-radius: 3px;
   padding: 3px;
   color:#279a27;
+}
+
+.tweetForm__input--username:focus,
+.tweetForm__input--message:focus {
+  outline: 1.5px solid rgb(17, 190, 17);
+  box-shadow:
+  0 0 7px rgb(39, 156, 37),
+  0 0 10px rgb(19, 81, 18),
+  0 0 21px rgb(32, 103, 31);
 }
 
 .tweetForm__count {

@@ -19,6 +19,13 @@
   background-color: var(--mypage-component-color);
 }
 
+.myInfo__profile > img {
+  box-shadow:
+  0 0 7px rgb(39, 156, 37),
+  0 0 10px rgb(19, 81, 18),
+  0 0 21px rgb(32, 103, 31);
+}
+
 .myInfo__detail {
   /* padding-left: 20px; */
   display: flex;
