@@ -148,8 +148,12 @@ main {
 .Title {
   color: rgb(188, 100, 151);
   font-size: 120px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Libre Barcode 39 Text', cursive;
+  margin-bottom: 1rem;
+}
 
+a {
+  text-decoration: none;
 }
 
 

@@ -4,9 +4,9 @@ import Tweet from '../Components/Tweet';
 import './MyPage.css';
 import dummyTweets from '../static/dummyData';
 
-const MyPage = () => {
+export let imageURL = dummyTweets[1].picture;
 
-  let imageURL = "";
+const MyPage = () => {
 
   const [showPopup, setShowPopup] = useState(false); 
 
@@ -22,7 +22,6 @@ const MyPage = () => {
   };
 
   const changeURL = (event) => {
-    console.log(event.target.value);
     imageURL = event.target.value;
   };
 
@@ -42,7 +41,9 @@ const MyPage = () => {
 
 
 
-  const filteredTweets = dummyTweets.filter(item => item.username === "parkhacker");
+  const filteredTweets = dummyTweets.filter(item => {
+    item.username === "parkhacker" ? item.picture = imageURL : item.picture = item.picture;
+    return item.username === "parkhacker"});
 
 
   return (
@@ -50,7 +51,7 @@ const MyPage = () => {
       <div className="myInfo__container">
         <div className="myInfo__wrapper">
           <div className="myInfo__profile">
-            <img src={filteredTweets[0].picture} />
+            <img src={imageURL} />
           </div>
           <div className="myInfo__detail">
             <p className="myInfo__detailName">
@@ -58,22 +59,27 @@ const MyPage = () => {
             </p>
             <p>28 팔로워 100 팔로잉</p>
           </div>
-          <div className='myInfo__changePic' onClick={setShowPopup}>Edit my profile</div>
+          <div className='myInfo__changePic' onClick={setShowPopup}>사진 변경하기</div>
           {showPopup ? (
             <div className="popup">
               <div className="popup_inner">
-                <input className = "picURL" type="text" onChange = {changeURL} placeholder = "이미지 주소를 입력하세요."></input>
-                <button className="change" onClick={changePic}>
-                  Change
-                </button>
+                <div className="close_wrapper">
+                  <button className="close" onClick={togglePopup}>
+                    x
+                  </button>
 
-                <button className="setToDefault" onClick={setToDefault}>
-                  default
-                </button>
+                </div>
+                <div className="input_wrapper">
+                  <input className = "picURL" type="text" onChange = {changeURL} placeholder = "이미지 주소를 입력하세요."></input>
+                  
+                  <button className="change" onClick={changePic}>
+                    바꾸기
+                  </button>
 
-                <button className="close" onClick={togglePopup}>
-                  x
-                </button>
+                  <button className="setToDefault" onClick={setToDefault}>
+                    디폴트 사진
+                  </button>
+                </div>
               </div>
             </div>
           ) : null}

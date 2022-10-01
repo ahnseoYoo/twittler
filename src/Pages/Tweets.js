@@ -4,6 +4,7 @@ import Footer from '../Footer';
 import Tweet from '../Components/Tweet';
 import './Tweets.css';
 import dummyTweets from '../static/dummyData';
+import { imageURL } from './MyPage';
 
 
 
@@ -22,7 +23,7 @@ const Tweets = () => {
     const tweet =   {
       id: dataInput.length + 1,
       username: userNameInput,
-      picture: userNameInput === "parkhacker" ? `https://randomuser.me/api/portraits/lego/5.jpg`: `https://randomuser.me/api/portraits/lego/${getRandomNumber(
+      picture: userNameInput === "parkhacker" ? imageURL : `https://randomuser.me/api/portraits/lego/${getRandomNumber(
         1,
         9
       )}.jpg`
@@ -54,7 +55,7 @@ const Tweets = () => {
       <div className="tweetForm__container">
         <div className="tweetForm__wrapper">
           <div className="tweetForm__profile">
-            <img src = {userNameInput === "parkhacker" ? dummyTweets[1].picture : `https://randomuser.me/api/portraits/lego/${getRandomNumber(
+            <img src = {userNameInput === "parkhacker" ? imageURL : `https://randomuser.me/api/portraits/lego/${getRandomNumber(
               1,
               9
             )}.jpg`} />
