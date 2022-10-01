@@ -34,7 +34,7 @@
 
 .aboutTwittler__content {
   flex: 1 0 80vh;
-  border: 2px solid var(--about-component-color);
+  /* border: 2px solid var(--about-component-color); */
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@
 
 
 .aboutTwittler__content > .fas {
-  color:#df89a180;
+  color:#24a23180;
   margin: 30px 0 10px 0;
   font-size: 5rem;
   /* color: var(--default-text-color); */

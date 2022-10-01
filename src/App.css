@@ -17,9 +17,9 @@
   --button-color: var(--coz-blue-600); /*#295ce0*/
   --button-hover-color: var(--coz-blue-500); /*#5e85e8*/
   --shade-color: var(--gray-200); /*#e6e6e6*/
-  --mypage-component-color: #410c1f86;
-  --about-component-color: #410c1f86;
-  --tweets-component-color: #410c1f86;
+  --mypage-component-color:rgb(8, 77, 0);
+  --about-component-color: rgb(8, 77, 0);
+  --tweets-component-color: rgb(8, 77, 0);
 }
 
 #root {
@@ -29,15 +29,23 @@
 }
 
 body {
-  background-image: url("tweets_backbround.jpg");
+  /* background-image: url("tweets_backbround.jpg");
 
-  background-size: cover;
+  background-size: cover; */
+  background: rgb(76,187,23);
+  background: linear-gradient(90deg, rgba(76,187,23,1) 0%, rgba(12,84,12,1) 61%, rgba(12,36,0,1) 96%);
 
   display: flex;
   justify-content: center;
   align-content: center;
   min-height: 100vh;
+  overflow: hidden;
 }
+
+/* #other-div {
+  position: absolute;
+  bottom: 40px; right: 40px;
+} */
 
 button,
 input,
@@ -78,7 +86,8 @@ textarea {
   display: flex;
   flex-direction: column;
   /* min-height: 100%; */
-  border-radius: 18px;
+  border-radius: 10px;
+  /* border-radius: 10px 10px 10px 10px; */
   overflow: hidden;
   margin-bottom: 100px;
 }
@@ -90,12 +99,15 @@ footer {
   padding: 0.3rem;
   font-size: 14px;
   font-weight: 400;
-  color: var(--gray-600);
+  color: rgba(223, 0, 0, 0.548);
+  /* color: var(--gray-600); */
   text-align: right;
   border: 2px solid var(--footer-component-color);
+  padding-right: 10px;
 }
 
 main {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -105,8 +117,9 @@ main {
 }
 
 .sidebar {
+  /* padding-top: 20px; */
   height: 1000px;
-  background-color: rgba(0, 0, 0, 0.533);
+  background-color: rgba(0, 0, 0, 0.826);
   display: flex;
   flex-direction: column;
 
@@ -123,7 +136,7 @@ main {
 .fa-comment-dots, 
 .fa-question-circle, 
 .fa-user  {
-  color: #df89a1;
+  color: #3ffa3f;
 }
 
 .features {
@@ -133,7 +146,7 @@ main {
   display: flex;
   flex-direction: column;
   /* border: 1px solid var(--main-border-color); */
-  /* border-radius: 25px; */
+  border-radius: 0 10px 10px 0;
   overflow: hidden;
   flex: 1 0 0;
 }
@@ -146,14 +159,27 @@ main {
 }
 
 .Title {
-  color: rgb(188, 100, 151);
+  color: black;
   font-size: 120px;
   font-family: 'Libre Barcode 39 Text', cursive;
   margin-bottom: 1rem;
+  background: linear-gradient(to top, #000000 60%, #1e9716, #14f000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 a {
   text-decoration: none;
 }
 
+.title__wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
 
+.gif {
+  margin-left: 40px;
+  margin-bottom: 20px;
+  width: 150px;
+}

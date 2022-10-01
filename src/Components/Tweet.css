@@ -7,7 +7,7 @@
 
 .tweet:hover {
   /* background-color: var(--shade-color); */
-  background-color: rgba(129, 25, 53, 0.388);
+  background-color: #258a1c59;
 }
 
 .tweet__profile {
@@ -23,7 +23,7 @@
 }
 
 .tweet__content {
-  color: rgb(177, 163, 163);
+  color: #59bb59;
   font-size: 15px;
   flex: 1 0 0;
 }
@@ -39,15 +39,16 @@
   color: var(--bold-text-color);
   font-weight: 700;
   margin-left: 0.5rem;
-  color:rgb(187, 138, 157);
-  background-color: rgba(78, 15, 35, 0.595);
+  color:#279a27;
+  background-color: rgba(0, 0, 0, 0.595);
   border-radius: 8px;
   padding: 0 8px;
 }
 
 .tweet__userInfo--wrapper > .tweet__createdAt {
   display: inline-block;
-  color: var(--sub-text-color);
+  /* color: var(--sub-text-color); */
+  color:#036512d8;
   margin-left: 0.5rem;
 }
 

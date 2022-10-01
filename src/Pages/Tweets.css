@@ -1,6 +1,8 @@
 .tweetForm__container {
   /* border-bottom: 1px solid var(--main-border-color); */
   margin-bottom: 0.5rem;
+  background-color: var(--tweets-component-color);
+  
 }
 
 .tweetForm__wrapper {
@@ -46,24 +48,24 @@
 }
 
 .tweetForm__input--username {
-  background-color: rgba(233, 212, 220, 0.672);
+  background-color: rgba(0, 0, 0, 0.672);
   flex: 1 0 0;
   width: 20rem;
   border: 0;
   border-radius: 3px;
   margin-bottom: 2px;
   padding: 3px;
-  color:rgb(46, 20, 4);
+  color:#279a27;
 }
 
 .tweetForm__input--message {
-  background-color: rgba(233, 212, 220, 0.672);
+  background-color: rgba(0, 0, 0, 0.672);
   flex: 3 0 0;
   width: 20rem;
   border: 0;
   border-radius: 3px;
   padding: 3px;
-  color:rgb(46, 20, 4);
+  color:#279a27;
 }
 
 .tweetForm__count {
@@ -74,7 +76,7 @@
 }
 
 .tweetForm__count__text {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .tweetForm__submit {
@@ -96,21 +98,21 @@
   height: 70px;
   margin: 0.5rem;
   padding: 0.5rem 1rem;
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   cursor: pointer;
-  background: rgb(68, 14, 41);
-  outline: 3px solid rgb(134, 49, 82);
-  color: rgb(226, 162, 185);
-
-  transition: 0.4s;
+  background: rgb(0, 0, 0);
+  outline: 3px solid #279a27;
+  color: #1db11d;
+  transition: 0.5s;
 }
 
 .tweetForm__submitButton:hover,
 .tweetForm__submitButton:focus {
   /* font-size: larger; */
-  background-color: black;
-  color: rgb(255, 255, 255);
-  outline: 3px solid rgb(183, 179, 179);
+  background-color: #279a27;
+  color: black;
+  outline: none;
+  /* outline: 3px solid rgb(0, 0, 0); */
 
 }
 
@@ -121,7 +123,7 @@
 
 .tweets {
   /* flex: 1 0 70vh; */
-  border: 2px solid var(--tweets-component-color);
+  /* border: 2px solid var(--tweets-component-color); */
   overflow-y: scroll;
 }
 
@@ -130,7 +132,7 @@
 }
 
 .tweets::-webkit-scrollbar-thumb {
-  background-color: rgb(32, 6, 19);
+  background-color: #000000;
   border-radius: 80px;
 }
 .tweets::-webkit-scrollbar-track {

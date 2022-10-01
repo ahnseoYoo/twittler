@@ -39,8 +39,8 @@
 }
 
 .tweets__mypage{
-  flex: 1 0 80vh;
-  border: 2px solid var(--mypage-component-color);
+  flex: 1 0 50vh;
+  /* border: 2px solid var(--mypage-component-color); */
   overflow-y: scroll;
 }
 
@@ -55,24 +55,23 @@
 }
 .tweets__mypage::-webkit-scrollbar-track {
   background-color: rgba(128, 128, 128, 0);
-}
+} 
 
 
 .myInfo__changePic{
 
   border-radius: 10px;
   padding: 5px;
-  background-color: rgb(68, 14, 41);
-  outline: 3px solid rgb(134, 49, 82);
-  color: rgb(226, 162, 185);
-
-  transition: 0.4s;
+  background: rgb(0, 0, 0);
+  outline: 3px solid #279a27;
+  color: #1db11d;
+  transition: 0.5s;
 }
 
 .myInfo__changePic:hover{
-  outline: 3px solid rgb(183, 179, 179);
-  background-color: black;
-  color: white;
+  background-color: #279a27;
+  color: black;
+  outline: none;
   padding: 5px;
   cursor: pointer;
 }
@@ -108,15 +107,15 @@
   top: 30%;
   bottom: 30%; */
   margin: auto;
-  background: rgba(83, 83, 83, 0.365);
-  border: 2.5px solid rgba(255, 255, 255, 0.255);
-  border-radius: 7px;
+  background: rgba(12, 56, 12, 0.648);
+  border: 1px solid rgba(0, 255, 21, 0.564);
+  border-radius: 3px;
   
 }
 
-.popup_inner:hover{
+/* .popup_inner:hover{
   background: rgba(145, 145, 145, 0.365);
-}
+} */
 
 
 .popup_inner input {
@@ -133,13 +132,13 @@
 .close {
   margin-left: 450px;
   padding: 0 5.5px 3px 5px;
-  background-color: rgb(41, 7, 8);
+  background-color: rgb(7, 131, 15);
   color: white;
   transition: 0.5s;
 }
 
 .close:hover {
-  background-color: rgba(144, 144, 144, 0.504);
+  background-color: rgba(175, 0, 0, 0.687);
   color: white;
 }
 
@@ -167,11 +166,12 @@
   height: 30px;
   margin: 5px 5px;
   padding: 5px;
-  background-color: rgb(31, 31, 31);
+  background-color: rgb(0, 0, 0);
   transition: 0.5s;
+  border-radius: 3px;
 }
 
 .change:hover,
 .setToDefault:hover {
-  background-color: rgb(31, 31, 31);
+  background-color: rgb(18, 131, 29);
 }

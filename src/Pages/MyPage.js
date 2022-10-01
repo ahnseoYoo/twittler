@@ -14,7 +14,7 @@ const MyPage = () => {
 
   const[currentPic, setPic] = useState(false);
   
-  const[defaultPic, setDefaultPic] = useState("https://randomuser.me/api/portraits/lego/5.jpg");
+  const[defaultPic, setDefaultPic] = useState('https://art.pixilart.com/21360253eb15ad9.png');
   
 
   const togglePopup = (event) => {
@@ -31,7 +31,7 @@ const MyPage = () => {
   }
 
   const setToDefault = (event) => {
-    dummyTweets[1].picture = "https://randomuser.me/api/portraits/lego/5.jpg"
+    imageURL = "https://art.pixilart.com/21360253eb15ad9.png"
     setShowPopup(event.target.value);
   }
 
