@@ -1,4 +1,11 @@
+@font-face {
+  font-family: "neodgm";
+  src: url("../neodgm.woff") format("woff");
+}
+
+
 .myInfo {
+  
   display: flex;
   flex-direction: column;
   flex: 1 0 0;
@@ -19,6 +26,7 @@
   background-color: var(--mypage-component-color);
 }
 
+
 .myInfo__profile > img {
   box-shadow:
   0 0 7px rgb(39, 156, 37),
@@ -32,9 +40,15 @@
   flex-direction: column;
 }
 
+.myInfo__detail > p {
+
+  font-family: "neodgm";
+}
+
 .myInfo__detail > .myInfo__detailName {
+
   font-size: 1.2rem;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .myInfo__profile > img {
@@ -46,7 +60,7 @@
 }
 
 .tweets__mypage{
-  flex: 1 0 50vh;
+  flex: 1 0 40vh;
   /* border: 2px solid var(--mypage-component-color); */
   overflow-y: scroll;
 }
@@ -57,7 +71,7 @@
 }
 
 .tweets__mypage::-webkit-scrollbar-thumb {
-  background-color: rgb(32, 6, 19);
+  background-color: rgb(0, 0, 0);
   border-radius: 80px;
 }
 .tweets__mypage::-webkit-scrollbar-track {
@@ -66,11 +80,11 @@
 
 
 .myInfo__changePic{
-
-  border-radius: 10px;
+  font-family: "neodgm";
+  border-radius: 3px;
   padding: 5px;
   background: rgb(0, 0, 0);
-  outline: 3px solid #279a27;
+  outline: 2px solid #279a27;
   color: #1db11d;
   transition: 0.5s;
 }
@@ -78,7 +92,6 @@
 .myInfo__changePic:hover{
   background-color: #279a27;
   color: black;
-  outline: none;
   padding: 5px;
   cursor: pointer;
 }
@@ -101,6 +114,7 @@
 
 
 .popup_inner {
+
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -165,11 +179,14 @@
 }
 
 .picURL {
+  font-family: "neodgm";
   margin: 10px
 }
 
 .change,
 .setToDefault {
+  font-family: "neodgm";
+  font-size: 15px;
   height: 30px;
   margin: 5px 5px;
   padding: 5px;

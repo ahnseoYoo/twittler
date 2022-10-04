@@ -1,4 +1,4 @@
-import React, { useState, useInput } from 'react';
+import React, { useState } from 'react';
 import Footer from '../Footer';
 import Tweet from '../Components/Tweet';
 import './MyPage.css';
@@ -10,11 +10,11 @@ const MyPage = () => {
 
   const [showPopup, setShowPopup] = useState(false); 
 
-  const [currentPicURL, setPicURL] = useState(dummyTweets[1].picture)
+  // const [currentPicURL, setPicURL] = useState(dummyTweets[1].picture)
 
-  const[currentPic, setPic] = useState(false);
+  // const[currentPic, setPic] = useState(false);
   
-  const[defaultPic, setDefaultPic] = useState('https://art.pixilart.com/21360253eb15ad9.png');
+  // const[defaultPic, setDefaultPic] = useState('https://art.pixilart.com/21360253eb15ad9.png');
   
 
   const togglePopup = (event) => {
@@ -41,7 +41,7 @@ const MyPage = () => {
 
 
 
-  const filteredTweets = dummyTweets.filter(item => {
+    const filteredTweets = dummyTweets.filter(item => {
     item.username === "parkhacker" ? item.picture = imageURL : item.picture = item.picture;
     return item.username === "parkhacker"});
 

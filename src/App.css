@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "neodgm";
+  src: url("neodgm.woff") format("woff");
+}
+
+@font-face {
+  font-family: "pixelBarcode";
+  src: url("BARCODE_TFB.woff") format("woff");
+}
+
+
 * {
   box-sizing: border-box;
   font-size: 16px;
@@ -34,6 +45,7 @@ body {
   background-size: cover; */
   background: rgb(76,187,23);
   background: linear-gradient(90deg, rgba(76,187,23,1) 0%, rgba(12,84,12,1) 61%, rgba(12,36,0,1) 96%);
+  
 
   display: flex;
   justify-content: center;
@@ -66,6 +78,8 @@ input {
 }
 
 button {
+  font-family: 'neodgm';
+  font-size: 1.3rem;
   background-color: var(--button-color);
   color: var(--button-text-color);
 }
@@ -75,6 +89,7 @@ button:hover {
 }
 
 textarea {
+  
   overflow: auto;
   resize: none;
   margin-top: 4px;
@@ -86,13 +101,14 @@ textarea {
   display: flex;
   flex-direction: column;
   /* min-height: 100%; */
-  border-radius: 10px;
+  border-radius: 5px;
   /* border-radius: 10px 10px 10px 10px; */
   overflow: hidden;
   margin-bottom: 100px;
 }
 
 footer {
+  
   background-color: rgba(0, 0, 0, 0.444);
   position: relative;
   flex: 0 0 1rem;
@@ -106,7 +122,12 @@ footer {
   padding-right: 10px;
 }
 
+footer > div{
+  font-family: 'neodgm';
+}
+
 main {
+  
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -135,7 +156,9 @@ main {
 
 .fa-comment-dots, 
 .fa-question-circle, 
-.fa-user  {
+.fa-user,
+.fa-hand-point-left,
+.fa-hand-point-right  {
   color: #3ffa3f;
   transition: 0.5s;
 }
@@ -144,7 +167,9 @@ main {
 
 .fa-comment-dots:hover, 
 .fa-question-circle:hover, 
-.fa-user:hover  {
+.fa-user:hover,
+.fa-hand-point-left:hover,
+.fa-hand-point-right:hover   {
   color: #3ffa3f;
   text-shadow:
     0 0 7px rgb(39, 156, 37),
@@ -164,7 +189,7 @@ main {
   display: flex;
   flex-direction: column;
   /* border: 1px solid var(--main-border-color); */
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 5px 5px 0;
   overflow: hidden;
   flex: 1 0 0;
 }
@@ -179,9 +204,11 @@ main {
 .Title {
   color: black;
   font-size: 120px;
-  font-family: 'Libre Barcode 39 Text', cursive;
+  font-family: "pixelBarcode";
+  letter-spacing: 3px;
+  /* font-family: 'Libre Barcode 39 Text', cursive; */
   margin-bottom: 1rem;
-  background: linear-gradient(to top, #000000 60%, #1e9716, #14f000);
+  background: linear-gradient(to top, #000000 30%,#000000, #000000, #1e9716, #14f000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -194,6 +221,7 @@ a {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  justify-content: space-between;
 }
 
 .gif {

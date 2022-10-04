@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "neodgm";
+  src: url("../neodgm.woff") format("woff");
+}
+
+
 .tweetForm__container {
   /* border-bottom: 1px solid var(--main-border-color); */
   margin-bottom: 0.5rem;
@@ -60,9 +66,11 @@
   margin-bottom: 2px;
   padding: 3px;
   color:#279a27;
+  font-family: "neodgm";
 }
 
 .tweetForm__input--message {
+  font-family: "neodgm";
   background-color: rgba(0, 0, 0, 0.672);
   flex: 3 0 0;
   width: 20rem;
@@ -114,7 +122,7 @@
   border-radius: 0.2rem;
   cursor: pointer;
   background: rgb(0, 0, 0);
-  outline: 3px solid #279a27;
+  outline: 2px solid #279a27;
   color: #1db11d;
   transition: 0.5s;
 }
@@ -122,10 +130,13 @@
 .tweetForm__submitButton:hover,
 .tweetForm__submitButton:focus {
   /* font-size: larger; */
-  background-color: #279a27;
-  color: black;
-  outline: none;
-  /* outline: 3px solid rgb(0, 0, 0); */
+  background-color: rgb(142, 39, 39);
+  color: rgb(0, 0, 0);
+  outline: 2px solid rgb(142, 39, 39);
+  box-shadow:
+  0 0 7px rgb(142, 39, 39),
+  0 0 10px rgb(94, 11, 11),
+  0 0 21px rgb(104, 10, 10);
 
 }
 
@@ -135,7 +146,8 @@
 }
 
 .tweets {
-  /* flex: 1 0 70vh; */
+  
+  flex: 1 0 40vh;
   /* border: 2px solid var(--tweets-component-color); */
   overflow-y: scroll;
 }

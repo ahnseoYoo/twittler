@@ -1,4 +1,12 @@
+@font-face {
+  font-family: "neodgm";
+  src: url("../neodgm.woff") format("woff");
+}
+
+
+
 .tweet {
+  
   display: flex;
   list-style: none;
   padding: 0.8rem 1rem;
@@ -27,12 +35,14 @@
 }
 
 .tweet__content {
+  
   color: #59bb59;
   font-size: 15px;
   flex: 1 0 0;
 }
 
 .tweet__userInfo {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +51,7 @@
 .tweet__userInfo--wrapper > .tweet__username {
   display: inline-block;
   color: var(--bold-text-color);
-  font-weight: 700;
+  /* font-weight: 700; */
   margin-left: 0.5rem;
   color:#279a27;
   background-color: rgba(0, 0, 0, 0.595);
@@ -82,5 +92,11 @@
 }
 
 .tweet__message {
+  font-family: "neodgm";
+  transform: scale(1, 1.05);
   padding: 0.5rem;
+}
+.tweet__username {
+  font-size: 1.2rem;
+  font-family: "neodgm";
 }

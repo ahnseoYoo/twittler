@@ -21,7 +21,7 @@ const App = (props) => {
       <div>
       <Link to = "/">
         <div className = "title__wrapper">
-          <div className='Title'>TWITTLER<br/></div>
+          <pre className='Title'>T  W  I  T  T  L  E  R</pre>
           <img className = "gif" src = "greenGlobe2.gif" width = "200"/>
         </div>
       </Link>

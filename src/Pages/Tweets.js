@@ -18,24 +18,33 @@ const Tweets = () => {
   const [messageInput, setMsg] = useState("");
   const [dataInput, setData] = useState(dummyTweets);
   // TODO : 새로 트윗을 작성하고 전송할 수 있게 useState를 적절히 활용하세요. O
+  let textarea = document.querySelector('textarea');
 
   const handleButtonClick = (event) => {
-    const tweet =   {
-      id: dataInput.length + 1,
-      username: userNameInput,
-      picture: userNameInput === "parkhacker" ? imageURL : `https://randomuser.me/api/portraits/lego/${getRandomNumber(
-        1,
-        9
-      )}.jpg`
-      ,
-      content: messageInput,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    }
-    const newData = [tweet, ...dataInput]
-    setData(newData);
 
-    dummyTweets.unshift(tweet);
+    if(messageInput.length === 0) {
+      alert('내용을 입력해주세요')
+    }
+    else {
+      const tweet =   {
+        id: dataInput.length + 1,
+        username: userNameInput,
+        picture: userNameInput === "parkhacker" ? imageURL : `https://randomuser.me/api/portraits/lego/${getRandomNumber(
+          1,
+          9
+        )}.jpg`
+        ,
+        content: messageInput,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      }
+      const newData = [tweet, ...dataInput]
+      setData(newData);
+  
+      dummyTweets.unshift(tweet);
+      setMsg('');
+      textarea.value = "";
+    }
     // TODO : Tweet button 엘리먼트 클릭시 작동하는 함수를 완성하세요.
     // 트윗 전송이 가능하게 작성해야 합니다.
   };
@@ -55,10 +64,7 @@ const Tweets = () => {
       <div className="tweetForm__container">
         <div className="tweetForm__wrapper">
           <div className="tweetForm__profile">
-            <img src = {userNameInput === "parkhacker" ? imageURL : `https://randomuser.me/api/portraits/lego/${getRandomNumber(
-              1,
-              9
-            )}.jpg`} />
+            <img src = {userNameInput === "parkhacker" ? imageURL : null} />
           </div>
           <div className="tweetForm__inputContainer">
             <div className="tweetForm__inputWrapper">
@@ -83,7 +89,7 @@ const Tweets = () => {
             <div className="tweetForm__submit">
               <div className="tweetForm__submitIcon"></div>
               <button className = "tweetForm__submitButton" onClick = {handleButtonClick} 
-              >Submit</button>
+              >Tweet</button>
             </div>
           </div>
         </div>
