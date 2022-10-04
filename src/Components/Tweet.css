@@ -60,9 +60,10 @@
 }
 
 .tweet__userInfo--wrapper > .tweet__createdAt {
+  font-family: 'neodgm';
   display: inline-block;
   /* color: var(--sub-text-color); */
-  color:#036512d8;
+  color:#0f9022d8;
   margin-left: 0.5rem;
 }
 

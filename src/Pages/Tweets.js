@@ -29,10 +29,10 @@ const Tweets = () => {
       const tweet =   {
         id: dataInput.length + 1,
         username: userNameInput,
-        picture: userNameInput === "parkhacker" ? imageURL : `https://randomuser.me/api/portraits/lego/${getRandomNumber(
+        picture: userNameInput !== "parkhacker" ? `https://randomuser.me/api/portraits/lego/${getRandomNumber(
           1,
           9
-        )}.jpg`
+        )}.jpg` : null
         ,
         content: messageInput,
         createdAt: new Date(),
@@ -64,7 +64,10 @@ const Tweets = () => {
       <div className="tweetForm__container">
         <div className="tweetForm__wrapper">
           <div className="tweetForm__profile">
-            <img src = {userNameInput === "parkhacker" ? imageURL : null} />
+            <img src = {userNameInput === "parkhacker" ? imageURL : `https://randomuser.me/api/portraits/lego/${getRandomNumber(
+          1,
+          9
+        )}.jpg`} />
           </div>
           <div className="tweetForm__inputContainer">
             <div className="tweetForm__inputWrapper">

@@ -122,8 +122,12 @@
   border-radius: 0.2rem;
   cursor: pointer;
   background: rgb(0, 0, 0);
-  outline: 2px solid #279a27;
+  outline: 1px solid #279a27;
   color: #1db11d;
+  box-shadow:
+  0 0 7px rgb(39, 156, 37),
+  0 0 10px rgb(19, 81, 18),
+  0 0 21px rgb(32, 103, 31);
   transition: 0.5s;
 }
 
@@ -132,7 +136,7 @@
   /* font-size: larger; */
   background-color: rgb(142, 39, 39);
   color: rgb(0, 0, 0);
-  outline: 2px solid rgb(142, 39, 39);
+  outline: 1px solid rgb(142, 39, 39);
   box-shadow:
   0 0 7px rgb(142, 39, 39),
   0 0 10px rgb(94, 11, 11),

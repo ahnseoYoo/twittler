@@ -31,6 +31,7 @@
   --mypage-component-color:rgb(8, 77, 0);
   --about-component-color: rgb(8, 77, 0);
   --tweets-component-color: rgb(8, 77, 0);
+  --app-height: calc(1000/1440*100);
 }
 
 #root {

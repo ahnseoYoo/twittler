@@ -1,14 +1,14 @@
 import React from 'react';
-import MyPage from './Pages/MyPage';
 import dummyTweets from './static/dummyData';
-import filteredTweets from './Pages/MyPage';
 
 const Footer = () => {
   return (
     <footer className = "footer">
       <div>
-        {window.location.href[window.location.href.length-1] === "/" ?
-        `Total tweet count: ${dummyTweets.length}` : `Total tweet count: ${dummyTweets.filter(item =>
+        {window.location.href[window.location.href.length-1] === "/" ? //regex 활용은 어떻게 하지?
+        `Total tweet count: ${dummyTweets.length}` :
+        window.location.href.includes("about") === true ? "Twittler info" :
+        `Total tweet count: ${dummyTweets.filter(item =>
           item.username === "parkhacker").length}`}
       </div>
     </footer>
