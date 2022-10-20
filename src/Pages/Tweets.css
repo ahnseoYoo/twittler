@@ -1,0 +1,210 @@
+@font-face {
+  font-family: "neodgm";
+  src: url("../neodgm.woff") format("woff");
+}
+
+
+.tweetForm__container {
+  /* border-bottom: 1px solid var(--main-border-color); */
+  margin-bottom: 0.5rem;
+  background-color: var(--tweets-component-color);
+  
+}
+
+.tweetForm__wrapper {
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  padding: 0.8rem 1rem;
+  background-color: var(--tweets-component-color);
+}
+
+.tweetForm__profile {
+  padding: 0.2rem;
+}
+
+.tweetForm__profile > img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  object-fit: cover;
+  box-shadow:
+  0 0 7px rgb(39, 156, 37),
+  0 0 10px rgb(19, 81, 18),
+  0 0 21px rgb(32, 103, 31);
+}
+
+.tweetForm__inputContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex: 1 0 0;
+}
+
+.tweetForm__inputWrapper {
+  display: flex;
+  margin: 0.5rem;
+  width: 320px;
+  /* flex: 0 0 4rem; */
+}
+
+.tweetForm__input {
+  display: flex;
+  width: 320px;
+  flex-direction: column;
+  /* flex: 1 0 0; */
+}
+
+.tweetForm__input--username {
+  background-color: rgba(0, 0, 0, 0.672);
+  flex: 1 0 0;
+  width: 20rem;
+  border: 0;
+  border-radius: 3px;
+  margin-bottom: 2px;
+  padding: 3px;
+  color:#279a27;
+  font-family: "neodgm";
+}
+
+.tweetForm__input--message {
+  font-family: "neodgm";
+  background-color: rgba(0, 0, 0, 0.672);
+  flex: 3 0 0;
+  width: 20rem;
+  border: 0;
+  border-radius: 3px;
+  padding: 3px;
+  color:#279a27;
+}
+
+.tweetForm__input--username:focus,
+.tweetForm__input--message:focus {
+  outline: 1.5px solid rgb(17, 190, 17);
+  box-shadow:
+  0 0 7px rgb(39, 156, 37),
+  0 0 10px rgb(19, 81, 18),
+  0 0 21px rgb(32, 103, 31);
+}
+
+.tweetForm__count {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tweetForm__count__text {
+  color: rgb(255, 255, 255);
+}
+
+.tweetForm__submit {
+  width: 100px;
+  display: flex;
+  margin: 25px;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+  /* flex: 1 0 0; */
+}
+
+.tweetForm__submitIcons {
+  flex: 1 0 0;
+}
+
+.tweetForm__submitButton {
+  width: 100px;
+  height: 70px;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background: rgb(0, 0, 0);
+  outline: 1px solid #279a27;
+  color: #1db11d;
+  box-shadow:
+  0 0 7px rgb(39, 156, 37),
+  0 0 10px rgb(19, 81, 18),
+  0 0 21px rgb(32, 103, 31);
+  transition: 0.5s;
+}
+
+.tweetForm__submitButton:hover,
+.tweetForm__submitButton:focus {
+  /* font-size: larger; */
+  background-color: rgb(142, 39, 39);
+  color: rgb(0, 0, 0);
+  outline: 1px solid rgb(142, 39, 39);
+  box-shadow:
+  0 0 7px rgb(142, 39, 39),
+  0 0 10px rgb(94, 11, 11),
+  0 0 21px rgb(104, 10, 10);
+
+}
+
+.tweetForm__submitButton:focus {
+  outline: none;
+  box-shadow: 0 0 3px #ddd;
+}
+
+.tweets {
+  
+  flex: 1 0 40vh;
+  /* border: 2px solid var(--tweets-component-color); */
+  overflow-y: scroll;
+}
+
+.tweets::-webkit-scrollbar {
+  width: 15px;
+}
+
+.tweets::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 80px;
+}
+.tweets::-webkit-scrollbar-track {
+  background-color: rgba(128, 128, 128, 0);
+}
+
+.tweet__selectUser {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+}
+
+.tweet__selectUser > select {
+  margin-left: 8px;
+  border: 1px solid var(--shade-color);
+  border-radius: 2px;
+}
+
+.tweet__selectUser > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--button-color);
+  margin-left: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 50px;
+}
+
+.tweet__selectUser > button:hover,
+.tweet__selectUser > button:focus {
+  outline: none;
+  box-shadow: 0 0 3px var(--button-color);
+  background: var(--button-hover-color);
+}
+
+.tweet__selectUser > button > .far {
+  color: var(--button-text-color);
+  background-color: var(--button-color);
+  font-size: 0.8rem;
+  padding: 0.1rem;
+  border-radius: 50px;
+  transform: translate(0, 0.5px);
+}
+

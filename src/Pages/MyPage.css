@@ -1,0 +1,205 @@
+@font-face {
+  font-family: "neodgm";
+  src: url("../neodgm.woff") format("woff");
+}
+
+
+.myInfo {
+  
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+}
+
+.myInfo__container {
+  /* border-bottom: 1px solid var(--main-border-color); */
+  margin-bottom: 0.5rem;
+}
+
+.myInfo__wrapper {
+  padding: px;
+  height: 180px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color:white;
+  background-color: var(--mypage-component-color);
+}
+
+
+.myInfo__profile > img {
+  box-shadow:
+  0 0 7px rgb(39, 156, 37),
+  0 0 10px rgb(19, 81, 18),
+  0 0 21px rgb(32, 103, 31);
+}
+
+.myInfo__detail {
+  /* padding-left: 20px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.myInfo__detail > p {
+
+  font-family: "neodgm";
+}
+
+.myInfo__detail > .myInfo__detailName {
+
+  font-size: 1.2rem;
+  /* font-weight: bold; */
+}
+
+.myInfo__profile > img {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.tweets__mypage{
+  flex: 1 0 40vh;
+  /* border: 2px solid var(--mypage-component-color); */
+  overflow-y: scroll;
+}
+
+
+.tweets__mypage::-webkit-scrollbar {
+  width: 15px;
+}
+
+.tweets__mypage::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0);
+  border-radius: 80px;
+}
+.tweets__mypage::-webkit-scrollbar-track {
+  background-color: rgba(128, 128, 128, 0);
+} 
+
+
+.myInfo__changePic{
+  font-family: "neodgm";
+  border-radius: 3px;
+  padding: 5px;
+  background: rgb(0, 0, 0);
+  outline: 2px solid #279a27;
+  color: #1db11d;
+  transition: 0.5s;
+}
+
+.myInfo__changePic:hover{
+  background-color: #279a27;
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.popup {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  position: absolute;
+  
+}
+
+
+.popup_inner {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  position: absolute;
+  width: 500px;
+  height: 100px;
+  /* left: 35%;
+  right: 35%;
+  top: 30%;
+  bottom: 30%; */
+  margin: auto;
+  background: rgba(12, 56, 12, 0.648);
+  border: 1px solid rgba(0, 255, 21, 0.564);
+  border-radius: 3px;
+  /* z-index: 1000;
+  position: absolute; */
+  
+}
+
+/* .popup_inner:hover{
+  background: rgba(145, 145, 145, 0.365);
+} */
+
+
+.popup_inner input {
+  width: 300px;
+  height: 30px;
+}
+
+.close_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.close {
+  margin-left: 450px;
+  padding: 0 5.5px 3px 5px;
+  background-color: rgb(7, 131, 15);
+  color: white;
+  transition: 0.5s;
+}
+
+.close:hover {
+  background-color: rgba(175, 0, 0, 0.687);
+  color: white;
+}
+
+
+
+
+
+.input_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+.프사변경 {
+  color: white;
+}
+
+.picURL {
+  font-family: "neodgm";
+  margin: 10px
+}
+
+.change,
+.setToDefault {
+  font-family: "neodgm";
+  font-size: 15px;
+  height: 30px;
+  margin: 5px 5px;
+  padding: 5px;
+  background-color: rgb(0, 0, 0);
+  transition: 0.5s;
+  border-radius: 3px;
+}
+
+.change:hover,
+.setToDefault:hover {
+  background-color: rgb(18, 131, 29);
+}

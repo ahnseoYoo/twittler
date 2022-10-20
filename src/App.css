@@ -1,0 +1,232 @@
+@font-face {
+  font-family: "neodgm";
+  src: url("neodgm.woff") format("woff");
+}
+
+@font-face {
+  font-family: "pixelBarcode";
+  src: url("BARCODE_TFB.woff") format("woff");
+}
+
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+:root {
+  --main-border-color: var(--gray-100); /*#f0f0f0*/
+  --point-color: var(--coz-purple-600); /*#452cdd*/
+  --point-color-tint: var(--coz-purple-400); /*#a296ee*/
+  --default-text-color: var(--gray-900); /*#141414*/
+  --sub-text-color: var(--gray-700); /*#5c5c5c*/
+  --bold-text-color: black;
+  --button-text-color: white;
+  --button-color: var(--coz-blue-600); /*#295ce0*/
+  --button-hover-color: var(--coz-blue-500); /*#5e85e8*/
+  --shade-color: var(--gray-200); /*#e6e6e6*/
+  --mypage-component-color:rgb(8, 77, 0);
+  --about-component-color: rgb(8, 77, 0);
+  --tweets-component-color: rgb(8, 77, 0);
+  --app-height: calc(1000/1440*100);
+}
+
+#root {
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+}
+
+body {
+  /* background-image: url("tweets_backbround.jpg");
+
+  background-size: cover; */
+  background: rgb(76,187,23);
+  background: linear-gradient(90deg, rgba(76,187,23,1) 0%, rgba(12,84,12,1) 61%, rgba(12,36,0,1) 96%);
+  
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* #other-div {
+  position: absolute;
+  bottom: 40px; right: 40px;
+} */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+  border: 0;
+}
+
+button,
+input {
+  overflow: visible; /* 1 */
+  border-radius: 2px;
+}
+
+button {
+  font-family: 'neodgm';
+  font-size: 1.3rem;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+textarea {
+  
+  overflow: auto;
+  resize: none;
+  margin-top: 4px;
+  border-radius: 2px;
+}
+
+.App {
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100%; */
+  border-radius: 5px;
+  /* border-radius: 10px 10px 10px 10px; */
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+footer {
+  
+  background-color: rgba(0, 0, 0, 0.444);
+  position: relative;
+  flex: 0 0 1rem;
+  padding: 0.3rem;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(223, 0, 0, 0.548);
+  /* color: var(--gray-600); */
+  text-align: right;
+  border: 2px solid var(--footer-component-color);
+  padding-right: 10px;
+}
+
+footer > div{
+  font-family: 'neodgm';
+}
+
+main {
+  
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 640px;
+  flex: 1 0 0;
+}
+
+.sidebar {
+  /* padding-top: 20px; */
+  height: 1000px;
+  background-color: rgba(0, 0, 0, 0.826);
+  display: flex;
+  flex-direction: column;
+
+}
+
+.far,
+.fas {
+  font-size: 2rem;
+  color: var(--default-text-color);
+  padding: 1.3rem;
+  cursor: pointer;
+}
+
+.fa-comment-dots, 
+.fa-question-circle, 
+.fa-user,
+.fa-hand-point-left,
+.fa-hand-point-right  {
+  color: #3ffa3f;
+  transition: 0.5s;
+}
+
+
+
+.fa-comment-dots:hover, 
+.fa-question-circle:hover, 
+.fa-user:hover,
+.fa-hand-point-left:hover,
+.fa-hand-point-right:hover   {
+  color: #3ffa3f;
+  text-shadow:
+    0 0 7px rgb(39, 156, 37),
+    0 0 10px rgb(19, 81, 18),
+    0 0 21px rgb(32, 103, 31);
+}
+
+
+
+
+
+
+.features {
+  background-color: rgba(0, 0, 0, 0.533);
+  height: 1000px;
+  width: 564px;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid var(--main-border-color); */
+  border-radius: 0 5px 5px 0;
+  overflow: hidden;
+  flex: 1 0 0;
+}
+
+#logo {
+  position: absolute;
+  left: 12px;
+  top: 4px;
+  height: 22px;
+}
+
+.Title {
+  color: black;
+  font-size: 120px;
+  font-family: "pixelBarcode";
+  letter-spacing: 3px;
+  /* font-family: 'Libre Barcode 39 Text', cursive; */
+  margin-bottom: 1rem;
+  background: linear-gradient(to top, #000000 30%,#000000, #000000, #1e9716, #14f000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title__wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.gif {
+  margin-left: 40px;
+  margin-bottom: 20px;
+  width: 150px;
+}
